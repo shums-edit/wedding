@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Ayesha &amp; Amir – Nikaah Invitation</title>
+<meta name="description" content="Nikaah on 17 December 2026 at Rida Palace, Kolkata">
+<meta name="theme-color" content="#072A20">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Amiri:wght@400;700&family=Cormorant+Garamond:ital,wght@0,500;0,600;1,500&family=Dancing+Script:wght@600;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --deep:#072A20; --emerald:#0B3D2E; --gold:#C9A24B; --goldlt:#E4C77A; --ivory:#F6EEDC; --rose:#7A1F3D; --ink:#13271f;
+  --star:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='80' height='80' viewBox='0 0 80 80' fill='none' stroke='%23C9A24B' stroke-opacity='.3'%3E%3Crect x='20' y='20' width='40' height='40'/%3E%3Crect x='20' y='20' width='40' height='40' transform='rotate(45 40 40)'/%3E%3Ccircle cx='40' cy='40' r='6'/%3E%3C/svg%3E");
+}
+*{box-sizing:border-box;margin:0}
+html{scroll-behavior:smooth;overflow-x:hidden;width:100%}
+body{font-family:"Cormorant Garamond",Georgia,serif;font-size:1.2rem;line-height:1.6;color:var(--ink);background:var(--ivory);-webkit-text-size-adjust:100%}
+body{overflow-x:hidden;max-width:100%}
+body.locked{overflow:hidden;height:100vh}
+a{color:inherit}
+:focus-visible{outline:3px solid var(--goldlt);outline-offset:3px}
+
+/* Gate (opening) */
+.gate{position:fixed;inset:0;z-index:100;display:grid;place-items:center}
+.half{position:absolute;top:0;bottom:0;width:50.5%;background:var(--deep) var(--star);transition:transform 1.5s cubic-bezier(.77,0,.18,1)}
+.half.l{left:0;border-right:2px solid var(--gold)}
+.half.r{right:0;border-left:2px solid var(--gold)}
+.gate.open .l{transform:translateX(-101%)}
+.gate.open .r{transform:translateX(101%)}
+.gate.open .seal-wrap{opacity:0;transform:scale(1.4);pointer-events:none}
+.seal-wrap{position:relative;z-index:2;text-align:center;color:var(--ivory);transition:opacity .6s,transform .8s}
+.seal{width:150px;height:150px;border-radius:50%;border:0;cursor:pointer;background:radial-gradient(circle at 35% 30%,var(--goldlt),var(--gold) 60%,#8f6d27);color:var(--deep);font:600 2.1rem "Cormorant Garamond",serif;box-shadow:0 0 0 6px rgba(201,162,75,.25),0 10px 30px rgba(0,0,0,.5);animation:ring 2.4s ease-out infinite}
+@keyframes ring{0%{box-shadow:0 0 0 0 rgba(228,199,122,.6),0 10px 30px rgba(0,0,0,.5)}100%{box-shadow:0 0 0 34px rgba(228,199,122,0),0 10px 30px rgba(0,0,0,.5)}}
+.seal-wrap p{margin-top:1.2rem;font-style:italic;font-size:1.3rem;color:var(--goldlt)}
+.seal-wrap .ar{font:400 1.9rem Amiri,serif;margin-bottom:1.2rem;color:var(--gold)}
+#fx{position:fixed;inset:0;z-index:200;pointer-events:none}
+
+/* Sections */
+section{padding:4.5rem 1.4rem;text-align:center;position:relative;overflow-x:clip}
+.wrap{max-width:640px;margin:0 auto}
+.dark{background:var(--emerald) var(--star);color:var(--ivory)}
+.dark h2,.dark .gold{color:var(--goldlt)}
+h1,h2,h3{font-weight:600;line-height:1.1}
+h2{font-size:2rem;margin-bottom:1rem;color:var(--emerald)}
+.ar{font-family:Amiri,serif}
+.bism{font:400 clamp(1.8rem,7vw,2.6rem) Amiri,serif;color:var(--goldlt);margin-bottom:1.6rem;direction:rtl}
+.names{font-size:clamp(3.4rem,17vw,6.4rem);font-weight:600;line-height:.95;color:var(--ivory);margin:1rem 0}
+.names .amp{display:block;font:italic 500 clamp(1.8rem,8vw,3rem) "Cormorant Garamond",serif;color:var(--gold);margin:.4rem 0}
+.rule{width:120px;height:2px;margin:1.6rem auto;background:linear-gradient(90deg,transparent,var(--gold),transparent)}
+.lead{font-style:italic;font-size:1.35rem;max-width:30ch;margin:0 auto}
+.hero{min-height:100vh;display:flex;align-items:center;justify-content:center;padding-top:3rem}
+.scroll{margin-top:2.4rem;color:var(--gold);font-size:1rem;font-style:italic}
+
+/* Couple */
+.photos{display:flex;justify-content:center;margin:0 0 3rem}
+.frame{position:relative;width:min(74vw,320px);aspect-ratio:4/5;border-radius:999px 999px 18px 18px;border:3px solid var(--gold);outline:6px solid var(--ivory);box-shadow:0 0 0 8px var(--gold),0 14px 34px rgba(7,42,32,.28);background:var(--emerald);overflow:hidden;display:grid;place-items:center;font:700 3.2rem "Dancing Script",cursive;color:var(--goldlt);opacity:0;transform:scale(.88) translateY(24px);transition:transform 1.4s cubic-bezier(.2,.8,.2,1),opacity 1.4s}
+.photos.in .frame{opacity:1;transform:none}
+.frame::before{content:attr(data-i)}
+.frame img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+.invite p{margin-bottom:1rem}
+.big{font-size:1.5rem;font-weight:600}
+.person{margin:1.6rem 0 .4rem}
+.script{font:700 clamp(2.5rem,11.5vw,3.7rem) "Dancing Script","Brush Script MT",cursive;line-height:1.2;color:var(--rose);text-shadow:0 1px 0 #fff,0 3px 16px rgba(201,162,75,.7);padding:.1em 0}
+.rel{font-style:italic;font-size:1.25rem;margin:.2rem 0 .1rem;font-weight:600}
+.addr{font-size:1.1rem;opacity:.85;line-height:1.45}
+.with{font:italic 500 1.5rem "Cormorant Garamond",serif;color:var(--gold);margin:1.2rem 0}
+.with::before,.with::after{content:"";display:inline-block;width:46px;height:1px;background:var(--gold);vertical-align:middle;margin:0 .8rem}
+
+/* Event */
+.date{font-size:clamp(2.6rem,12vw,4.4rem);font-weight:600;color:var(--goldlt);line-height:1}
+.date small{display:block;font-size:1.4rem;font-style:italic;color:var(--ivory);font-weight:500;margin-top:.5rem}
+.prog{margin:2rem auto;display:grid;gap:1.2rem}
+.prog div{border-top:1px solid rgba(201,162,75,.5);padding-top:1rem}
+.prog b{display:block;font-size:1.7rem;color:var(--goldlt);font-weight:600}
+.btn{display:inline-block;margin-top:.6rem;padding:.75rem 1.6rem;border-radius:99px;background:var(--gold);color:var(--deep);font-weight:600;text-decoration:none;font-size:1.15rem;border:0;cursor:pointer;font-family:inherit}
+.btn.o{background:transparent;color:var(--emerald);border:1.5px solid var(--emerald)}
+.cd{display:flex;justify-content:center;gap:.7rem;margin-top:2.6rem}
+.cd div{min-width:66px;padding:.7rem .3rem;border:1px solid var(--gold);border-radius:10px;background:rgba(7,42,32,.6)}
+.cd b{display:block;font-size:2rem;color:var(--goldlt);font-variant-numeric:tabular-nums;line-height:1}
+.cd span{font-size:.95rem}
+
+/* RSVP */
+.rs{list-style:none;padding:0;margin-top:1.6rem;display:grid;gap:.9rem;text-align:left}
+.rs li{display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:.6rem;padding:.9rem 1.1rem;border:1.5px solid var(--gold);border-radius:12px;background:#fffaf0}
+.rs strong{font-size:1.25rem;display:block;line-height:1.2}
+.rs span{font-size:1rem;opacity:.75}
+.rs .btn{margin:0;padding:.45rem 1rem;font-size:1rem}
+.rs .acts{display:flex;gap:.5rem}
+footer{padding:3rem 1.4rem 4rem;text-align:center;background:var(--deep);color:var(--goldlt);font-style:italic;font-size:1.25rem}
+footer .ar{display:block;font-size:1.8rem;font-style:normal;margin-bottom:.6rem}
+
+@media(prefers-reduced-motion:reduce){
+  *{animation:none!important;transition-duration:.01s!important}
+  .frame{transform:none}
+}
+</style>
+</head>
+<body class="locked">
+
+<!-- Opening gate -->
+<div class="gate" id="gate">
+  <div class="half l"></div><div class="half r"></div>
+  <div class="seal-wrap">
+    <div class="ar">بِسْمِ اللَّهِ الرَّحْمَٰنِ الرَّحِيمِ</div>
+    <button class="seal" id="seal" aria-label="Open the invitation">A &amp; A</button>
+    <p>Tap to open your invitation</p>
+  </div>
+</div>
+<canvas id="fx" aria-hidden="true"></canvas>
+
+<main>
+<section class="dark hero">
+  <div class="wrap">
+    <div class="bism" lang="ar">بِسْمِ اللَّهِ الرَّحْمَٰنِ الرَّحِيمِ</div>
+    <p class="lead">You are warmly invited to the Nikaah of</p>
+    <h1 class="names">Ayesha<span class="amp">&amp;</span>Amir</h1>
+    <div class="rule"></div>
+    <p class="big gold">Thursday, 17 December 2026</p>
+    <p>Rida Palace, Kolkata</p>
+    <p class="scroll">Scroll for details</p>
+  </div>
+</section>
+
+<section class="invite">
+  <div class="wrap">
+    <div class="photos" id="photos">
+      <div class="frame" data-i="Ayesha & Amir"><img src="aa.jpeg" alt="Ayesha and Amir" onerror="if(!this.dataset.t){this.dataset.t=1;this.src='aa.jpg'}else if(this.dataset.t==1){this.dataset.t=2;this.src='aa.png'}else{this.remove()}"></div>
+    </div>
+    <h2>With the blessings of Allah</h2>
+    <p class="big">Mrs. &amp; Mr. Farooque Yusuf Khan</p>
+    <p>request the pleasure of your company at the Nikaah of</p>
+    <div class="person">
+      <div class="script">Ayesha Farooque Khan</div>
+      <p class="rel">Daughter of Md. Farooque Yusuf Khan</p>
+      <p class="addr">Bandra (West), Mumbai – 400050</p>
+    </div>
+    <div class="with">with</div>
+    <div class="person">
+      <div class="script">Md Amir Azam</div>
+      <p class="rel">Son of Md. Zafarullah Khan</p>
+      <p class="addr">Vill. &amp; Post Rasoolpur, P.S. Noor Sarai,<br>Dist. Nalanda, Bihar – 803114</p>
+    </div>
+  </div>
+</section>
+
+<section class="dark">
+  <div class="wrap">
+    <h2>The programme</h2>
+    <div class="date">17 December<small>Thursday, 2026</small></div>
+    <div class="prog">
+      <div><b>Nikaah</b>After Namaz-e-Asr</div>
+      <div><b>Dinner</b><span id="dinner"></span></div>
+      <div><b>Venue</b>Rida Palace<br>8A, Tiljala Ln, Park Circus, Ballygunge,<br>Kolkata – 700017</div>
+    </div>
+    <a class="btn" target="_blank" rel="noopener" href="https://www.google.com/maps/search/?api=1&query=Rida+Palace+8A+Tiljala+Lane+Park+Circus+Kolkata+700017">Open in Google Maps</a>
+    <div class="cd" id="cd" aria-live="off"></div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <h2>Kindly RSVP</h2>
+    <p>Please let us know you are coming. Call or message any of the family below.</p>
+    <ul class="rs" id="rsvp"></ul>
+  </div>
+</section>
+</main>
+
+<footer>
+  <span class="ar" lang="ar">جزاكم الله خيراً</span>
+  Your presence and duas will complete our joy.
+</footer>
+
+<script>
+/* ===== EDIT HERE ===== */
+const CFG = {
+  dinner: "8:00 PM",
+  countdownTo: "2026-12-17T15:30:00+05:30",   // Nikaah, approx. after Asr (IST)
+  rsvp: [
+    ["Farhan Farooque Khan","8356926829"],
+    ["Md. Abutalha Khan","9321859267"],
+    ["Md. Ehsan Khan","9903124255"],
+    ["Md. Imtiyaz Khan","9748303910"],
+    ["Shakir Hussain Khan","9163621196"]
+  ]
+};
+/* ===================== */
+
+document.getElementById('dinner').textContent = CFG.dinner;
+document.getElementById('rsvp').innerHTML = CFG.rsvp.map(([n,p]) =>
+  `<li><div><strong>${n}</strong><span>+91 ${p}</span></div><div class="acts">
+   <a class="btn o" href="tel:+91${p}">Call</a>
+   <a class="btn" target="_blank" rel="noopener" href="https://wa.me/91${p}?text=${encodeURIComponent('Assalamu alaikum, I will attend the Nikaah on 17 December.')}">WhatsApp</a></div></li>`).join('');
+
+/* Countdown */
+const cd = document.getElementById('cd'), target = new Date(CFG.countdownTo).getTime();
+function tick(){
+  const d = target - Date.now();
+  if(d <= 0){ cd.innerHTML = '<p class="gold big">The day is here. Alhamdulillah.</p>'; return; }
+  const v = [[Math.floor(d/864e5),'days'],[Math.floor(d%864e5/36e5),'hours'],[Math.floor(d%36e5/6e4),'mins'],[Math.floor(d%6e4/1e3),'secs']];
+  cd.innerHTML = v.map(([n,l]) => `<div><b>${n}</b><span>${l}</span></div>`).join('');
+}
+tick(); setInterval(tick, 1000);
+
+/* Photo frames slide in once */
+new IntersectionObserver((e, o) => e.forEach(x => { if(x.isIntersecting){ x.target.classList.add('in'); o.unobserve(x.target); } }), {threshold:.35})
+  .observe(document.getElementById('photos'));
+
+/* Confetti poppers from both bottom corners */
+function pop(){
+  const c = document.getElementById('fx'), x = c.getContext('2d');
+  const W = c.width = innerWidth, H = c.height = innerHeight;
+  const cols = ['#C9A24B','#E4C77A','#F6EEDC','#7A1F3D','#2E9E78'];
+  const t0 = performance.now();
+  const P = [], k = Math.max(.6, Math.min(1.3, H/800));
+  function burst(){
+    for(let s = 0; s < 2; s++) for(let i = 0; i < 80; i++){
+      const a = (s ? -(100 + Math.random()*40) : -(40 + Math.random()*40)) * Math.PI/180, v = (10 + Math.random()*13) * k;
+      P.push({x:s?W:0, y:H, vx:Math.cos(a)*v, vy:Math.sin(a)*v, w:6+Math.random()*7, h:4+Math.random()*5, r:Math.random()*6, vr:(Math.random()-.5)*.4, c:cols[i%cols.length]});
+    }
+  }
+  burst(); setTimeout(burst, 650);
+  (function f(){
+    x.clearRect(0,0,W,H);
+    for(const p of P){ p.vy += .32*k; p.vx *= .99; p.vy *= .992; p.x += p.vx; p.y += p.vy; p.r += p.vr;
+      x.save(); x.translate(p.x,p.y); x.rotate(p.r); x.fillStyle = p.c; x.fillRect(-p.w/2,-p.h/2,p.w,p.h); x.restore(); }
+    for(let i = P.length-1; i >= 0; i--) if(P[i].y > H+40) P.splice(i,1);
+    if(P.length || performance.now() < t0 + 900) requestAnimationFrame(f); else x.clearRect(0,0,W,H);
+  })();
+}
+
+/* Open the gate */
+document.getElementById('seal').addEventListener('click', () => {
+  const g = document.getElementById('gate');
+  g.classList.add('open');
+  document.body.classList.remove('locked');
+  window.scrollTo(0,0);
+  if(!matchMedia('(prefers-reduced-motion: reduce)').matches) setTimeout(pop, 500);
+  setTimeout(() => g.remove(), 1800);
+});
+</script>
+</body>
+</html>
